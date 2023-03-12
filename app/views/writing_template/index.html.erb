@@ -5,11 +5,23 @@
 
   <body>
 
+  <style>
+    /* not active */
+    .nav-pills .nav-link:not(.active) {
+      color: black;
+    }
+
+    /* active*/
+    .nav-pills .nav-link {
+      color: white;
+    }
+  </style>
+
   <div class="container">
     <div class="row">
       <div class ="col-2">
         <nav class="nav flex-column nav-pills">
-          <a class="nav-link active" aria-current="page" href="/writing">Writing</a>
+          <a class="nav-link active bg-dark" aria-current="page" href="/writing">Writing</a>
           <a class="nav-link" href="/about">About</a>
           <a class="nav-link" href="/books">Books</a>
           <a class="nav-link" href="/now">Now</a>  
