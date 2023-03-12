@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+
+  <div class="container">
+    <div class="row">
+      <div class ="col-2">
+        <nav class="nav flex-column nav-pills">
+          <a class="nav-link active" aria-current="page" href="/writing">Writing</a>
+          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/books">Books</a>
+          <a class="nav-link" href="/now">Now</a>  
+        </nav>
+      </div>
+
+      <div class ="col-10">
+        <p>Hi, I'm Nick. Currently writing, reading, and learning about the world.</p>
+          
+        <!-- Table item-->
+          <div class="container">
+            <div class="row justify-content-between">
+
+              <table width="100%" border ="0">
+                <% @list_of_posts.each do |post| %>
+
+                  <tr>
+                    <td>
+                      <div class="col">
+                        <a href="/writing/<%= post.title %>">
+                          <%= post.title %>
+                      </div>
+                    </td>
+                
+                    <td text-align="center">
+                      <div class="col">
+                        <%= post.updated_at.strftime("%B %e, %Y") %>
+                      </div>
+                    </td>
+                  </tr>
+
+                <% end %>
+              </table>
+
+      </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
