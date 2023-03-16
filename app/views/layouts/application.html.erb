@@ -32,6 +32,19 @@
   <%= render "shared/navbar" %>
 
   <div class="container">
+    <div class="row">
+      <div class ="col-2">
+        <nav class="nav nav-pills flex-column flex-row">
+          <a class="nav-link active bg-dark" aria-current="page" href="/writing">Writing</a>
+          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/books">Books</a>
+          <a class="nav-link" href="/now">Now</a>  
+        </nav>
+      </div>
+
+      <div class ="col-10">
+
+  <div class="container">
     <%= render "shared/flashes" %>
 
     <%= yield %>
