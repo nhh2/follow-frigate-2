@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   # Routes for the Post resource:
 
+  # Writing some test code
+
   # CREATE
   post("/insert_post", { :controller => "posts", :action => "create" })
           
