@@ -45,10 +45,20 @@
     <div class="row">
       <div class ="col-2">
         <nav class="nav nav-pills flex-column flex-row">
-          <a class="nav-link active bg-dark" aria-current="page" href="/writing">Writing</a>
-          <a class="nav-link" href="/about">About</a>
-          <a class="nav-link" href="/books">Books</a>
-          <a class="nav-link" href="/now">Now</a>  
+
+          <a class="nav-link <%= 'active bg-dark' if current_page?(writing_path) || current_page?("/") %>" href="<%= writing_path %>">Writing</a>
+          <a class="nav-link <%= 'active bg-dark' if current_page?(about_path) %>" href="<%= about_path %>">About</a>
+          <a class="nav-link <%= 'active bg-dark' if current_page?(books_path) %>" href="<%= books_path %>">Books</a>
+          <a class="nav-link <%= 'active bg-dark' if current_page?(now_path) %>" href="<%= now_path %>">Now</a>
+
+          <!-- Old code that was keeping the dark pill on Writing -->
+            <!--
+              <a class="nav-link active bg-dark" aria-current="page" href="/writing">Writing</a>
+              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" href="/books">Books</a>
+              <a class="nav-link" href="/now">Now</a> 
+            -->
+
         </nav>
       </div>
 
